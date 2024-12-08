@@ -12,16 +12,24 @@ namespace Tyuiu.BurdovKS.Sprint6.Task2.V5.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            DataService ds = new DataService();
-            double[] massive = new double[11];
-            int count = 0;
-            for (double x = startValue; x <= stopValue; x++)
+            double[] valueA;
+            int len = (stopValue - startValue) + 1;
+            valueA = new double[len];
+            double y;
+            int i = 0;
+            for (int x = startValue; x <= stopValue; x++)
             {
-                double result = Math.Sin(x) + (Math.Cos(2 * x) / 2) - 1.5 * x;
-                massive[count] = Math.Round(result, 2);
-                count++;
+                if ((Math.Cos(x) - 2 * x) == 0)
+                {
+                    y = 0;
+                    valueA[i] = y;
+                    i++;
+                }
+                y = Math.Round(((2 * x - 3) / (Math.Cos(x) - 2 * x)) + 5 * x - 6, 2);
+                valueA[i] = y;
+                i++;
             }
-            return massive;
+            return valueA;
         }
     }
 }
