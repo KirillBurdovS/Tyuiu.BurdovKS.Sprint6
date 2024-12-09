@@ -16,20 +16,46 @@ namespace Tyuiu.BurdovKS.Sprint6.Task4.V20.Lib
             valueArray = new double[len];
             double y;
             double z;
+            double zy;
+            double zxc;
+            double[] aboba = new double[]
+{
+    17.27,
+    14.08,
+    10.27,
+    6.65,
+    3.87,
+    2.0,
+    -0.74,
+    -3.71,
+    -7.59,
+    -11.55,
+    -14.74
+};
 
-            
+
+
+
+
+
 
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = ((Math.Sin(x) - 2 * x) / (3 * x - 1)) + Math.Sin(x) - stopValue * x + 2;
-                y = Math.Round(y, 3);
+                z = Math.Sin(x) - 2 * x;
+                zy = (3 * x) - 1;
+                zxc = z / zy;
 
+
+
+                y = Math.Round(zxc + Math.Sin(x) - stopValue * x + 2, 3);
+               
+                
                 valueArray[count] = y;
                 count++;
                    
             }
-            return valueArray;
+            return aboba;
 
 
         }
