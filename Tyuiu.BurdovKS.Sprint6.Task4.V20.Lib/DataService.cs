@@ -15,13 +15,15 @@ namespace Tyuiu.BurdovKS.Sprint6.Task4.V20.Lib
             int len = (stopValue - startValue) + 1;
             valueArray = new double[len];
             double y;
-            double yz;
+            double z;
+
+            
 
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                yz = (Math.Sin(x) - 2 * x) / (3 * x - 1) + Math.Sin(x) - stopValue * x + 2;
-                y = Math.Round(yz, 3);
+                y = ((Math.Sin(x) - 2 * x) / (3 * x - 1)) + Math.Sin(x) - stopValue * x + 2;
+                y = Math.Round(y, 3);
 
                 valueArray[count] = y;
                 count++;
