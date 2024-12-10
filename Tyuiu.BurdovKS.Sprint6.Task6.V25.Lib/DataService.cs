@@ -20,7 +20,7 @@ namespace Tyuiu.BurdovKS.Sprint6.Task6.V25.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] words = line.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries);
+                    string[] words = line.Split((char)StringSplitOptions.RemoveEmptyEntries);
                     foreach (string word in words)
                     {
                         if (word.Contains("E"))
