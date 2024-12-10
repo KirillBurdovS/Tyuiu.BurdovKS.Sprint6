@@ -1,6 +1,6 @@
 
 
-using Tyuiu.BurdovKS.Sprint6.Task7.V1.lib;
+using Tyuiu.BurdovKS.Sprint6.Task7.V1.Lib;
 
 using System.IO;
 using System.Windows.Forms;
@@ -13,7 +13,7 @@ namespace Tyuiu.BurdovKS.Sprint6.Task7.V1
         {
             InitializeComponent();
         }
-        DataService ds = new DataService();
+        Class1 ds = new Class1();
         static string path;
         static int coll;
         static int rows;

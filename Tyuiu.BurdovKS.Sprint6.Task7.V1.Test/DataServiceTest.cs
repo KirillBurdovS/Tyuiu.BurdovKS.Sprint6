@@ -3,7 +3,7 @@
 
 
 using System.IO;
-using Tyuiu.BurdovKS.Sprint6.Task7.V1.lib;
+using Tyuiu.BurdovKS.Sprint6.Task7.V1.Lib;
 
 namespace Tyuiu.BurdovKS.Sprint6.Task7.V1.Test
 {
@@ -14,7 +14,7 @@ namespace Tyuiu.BurdovKS.Sprint6.Task7.V1.Test
         public void TestMethod1()
         {
 
-            DataService ds = new DataService();
+            Class1 ds = new Class1();
 
             string path = @"D:\Users\djura\source\repos\Tyuiu.BurdovKS.Sprint6\Tyuiu.BurdovKS.Sprint6.Task7.V1\bin\Debug\InPutFileTask7V1.txt";
 
