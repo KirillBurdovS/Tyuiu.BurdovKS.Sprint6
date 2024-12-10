@@ -11,6 +11,7 @@ namespace Tyuiu.BurdovKS.Sprint6.Task7.V1.Lib
         public int[,] GetMatrix(string path)
         {
 
+            // Читаем все строки из файла
             var lines = File.ReadAllLines(path);
             int rows = lines.Length;
 
@@ -27,28 +28,17 @@ namespace Tyuiu.BurdovKS.Sprint6.Task7.V1.Lib
                 string[] linr = lines[r].Split(';');
                 for (int c = 0; c < cols; c++)
                 {
-                    if (c == 2) // Специальное условие для третьего столбца
+                    if (c == 1 && int.TryParse(linr[c], out int value) && value < 0)
                     {
-                        if (int.TryParse(linr[c], out int value) && value < 0)
-                        {
-                            arr[r, c] = 1;
-                        }
-                        else if (int.TryParse(linr[c], out value))
-                        {
-                            arr[r, c] = value;
-                        }
-                        else
-                        {
-                            throw new FormatException($"Невозможно преобразовать '{linr[c]}' в целое число.");
-                        }
+                        arr[r, c] = 1;
+                    }
+                    else if (int.TryParse(linr[c], out value))
+                    {
+                        arr[r, c] = value;
                     }
                     else
                     {
-                        if (!int.TryParse(linr[c], out int value))
-                        {
-                            throw new FormatException($"Невозможно преобразовать '{linr[c]}' в целое число.");
-                        }
-                        arr[r, c] = value;
+                        throw new FormatException($"Невозможно преобразовать '{linr[c]}' в целое число.");
                     }
                 }
             }
