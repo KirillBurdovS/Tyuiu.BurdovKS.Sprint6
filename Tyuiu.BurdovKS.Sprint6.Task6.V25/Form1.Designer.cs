@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             groupBoxTask_BKS = new GroupBox();
+            textBoxEz_BKS = new TextBox();
             groupBoxData_BKS = new GroupBox();
             textBoxLn = new TextBox();
             groupBoxRes_BKS = new GroupBox();
@@ -38,7 +39,6 @@
             groupBoxFile_BKS = new GroupBox();
             buttonToDo_BKS = new Button();
             buttonOpenFile_BKS = new Button();
-            textBoxEz_BKS = new TextBox();
             groupBoxTask_BKS.SuspendLayout();
             groupBoxData_BKS.SuspendLayout();
             groupBoxRes_BKS.SuspendLayout();
@@ -54,6 +54,17 @@
             groupBoxTask_BKS.TabIndex = 0;
             groupBoxTask_BKS.TabStop = false;
             groupBoxTask_BKS.Text = "Условие";
+            // 
+            // textBoxEz_BKS
+            // 
+            textBoxEz_BKS.BackColor = SystemColors.Menu;
+            textBoxEz_BKS.BorderStyle = BorderStyle.None;
+            textBoxEz_BKS.Location = new Point(10, 20);
+            textBoxEz_BKS.Multiline = true;
+            textBoxEz_BKS.Name = "textBoxEz_BKS";
+            textBoxEz_BKS.Size = new Size(760, 51);
+            textBoxEz_BKS.TabIndex = 0;
+            textBoxEz_BKS.Text = resources.GetString("textBoxEz_BKS.Text");
             // 
             // groupBoxData_BKS
             // 
@@ -125,17 +136,6 @@
             buttonOpenFile_BKS.UseVisualStyleBackColor = true;
             buttonOpenFile_BKS.Click += buttonOpenFile_BKS_Click;
             // 
-            // textBoxEz_BKS
-            // 
-            textBoxEz_BKS.BackColor = SystemColors.Menu;
-            textBoxEz_BKS.BorderStyle = BorderStyle.None;
-            textBoxEz_BKS.Location = new Point(10, 20);
-            textBoxEz_BKS.Multiline = true;
-            textBoxEz_BKS.Name = "textBoxEz_BKS";
-            textBoxEz_BKS.Size = new Size(760, 51);
-            textBoxEz_BKS.TabIndex = 0;
-            textBoxEz_BKS.Text = resources.GetString("textBoxEz_BKS.Text");
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -146,7 +146,7 @@
             Controls.Add(groupBoxData_BKS);
             Controls.Add(groupBoxTask_BKS);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Спринт 6 Таск 6 Вариант 25 СМАРТб 24-1 Бурдов Кирилл Сергеевич";
             groupBoxTask_BKS.ResumeLayout(false);
             groupBoxTask_BKS.PerformLayout();
             groupBoxData_BKS.ResumeLayout(false);

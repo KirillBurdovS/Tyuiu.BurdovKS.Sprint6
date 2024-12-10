@@ -37,10 +37,10 @@ namespace Tyuiu.BurdovKS.Sprint6.Task6.V25
 
         private void buttonToDo_BKS_Click(object sender, EventArgs e)
         {
-           string strParameter = "";
+           
            
 
-           textBoxOut.Text = ds.CollectTextFromFile(strParameter, openFilePath);
+           textBoxOut.Text = ds.CollectTextFromFile(openFilePath);
 
 
         }
