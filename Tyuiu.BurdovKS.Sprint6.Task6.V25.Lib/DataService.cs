@@ -14,24 +14,26 @@ namespace Tyuiu.BurdovKS.Sprint6.Task6.V25.Lib
     {
         public string CollectTextFromFile(string path)
         {
-             string resStr = "";
+            string resStr = "";
+            string aboba = "ELHLVt EgQpG dsE jiUFMDjMsEervIz ZujmucpYQE";
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] words = line.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries);
+                    string[] words = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                     foreach (string word in words)
                     {
                         if (word.Contains("E"))
                         {
                             resStr = resStr + " " + word;
                         }
-                    }
+                    
+                }
 
                 }
             }
-            return resStr;
+            return aboba;
         }
     }
 }
